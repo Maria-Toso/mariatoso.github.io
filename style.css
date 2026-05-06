@@ -123,3 +123,14 @@ body {
     padding: 2px 8px;
     border-radius: 4px;
 }
+
+.project-card, .skills-list, .hero {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+.project-card.active, .skills-list.active, .hero.active {
+    opacity: 1;
+    transform: translateY(0);
+}

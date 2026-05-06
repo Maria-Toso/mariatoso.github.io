@@ -12,7 +12,7 @@ Portfólio profissional desenvolvido com foco em performance, UX e arquitetura l
 Apresentar projetos com estrutura escalável e código organizado.
 
 ## 🔗 Deploy
-https://maria-toso.github.io/mariatoso.github.io/
+[Portifólio/](https://maria-toso.github.io/mariatoso.github.io/)
 
 ## 📂 Estrutura
 - /data → dados dos projetos

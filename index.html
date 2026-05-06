@@ -3,51 +3,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maria Toso | Engineer</title>
-
+  <title>Maria Toso | Backend Engineer</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header class="nav">
   <div class="nav-content">
     <span class="logo">Maria Toso</span>
-    <button id="theme-toggle">🌙</button>
+    <div class="nav-links">
+        <a href="#projects">Work</a>
+        <a href="#contact">Contact</a>
+        <button id="theme-toggle">🌙</button>
+    </div>
   </div>
 </header>
 
 <main>
-
-<!-- HERO -->
 <section class="hero reveal">
-  <h1>I build data-driven systems</h1>
-  <p>Python • Backend • Data Engineering</p>
+  <span class="badge">Engineered for Efficiency</span>
+  <h1>I build systems that turn data into decisions.</h1>
+  <p>Specializing in Python, Backend Architecture, and Data Pipelines.</p>
+  <div class="hero-btns">
+      <a href="curriculo-maria.pdf" class="btn-primary" download>Get CV</a>
+      <a href="#contact" class="btn-secondary">Let's talk</a>
+  </div>
 </section>
 
-<!-- METRICS -->
 <section class="metrics reveal">
-  <div><h2 id="repos">...</h2><span>Repos</span></div>
-  <div><h2 id="stars">...</h2><span>Stars</span></div>
+  <div class="metric-card"><h2 id="repos">0</h2><span>Repositories</span></div>
+  <div class="metric-card"><h2 id="stars">0</h2><span>GitHub Stars</span></div>
 </section>
 
-<!-- CASE -->
 <section class="case reveal">
-  <h2>PriceTrackerES</h2>
-  <p>Fuel price analysis using historical data</p>
-
-  <canvas id="chart"></canvas>
+  <div class="case-header">
+      <h2>PriceTrackerES</h2>
+      <p>Fuel price analysis & historical visualization</p>
+  </div>
+  <div class="chart-container">
+      <canvas id="chart"></canvas>
+  </div>
 </section>
 
-<!-- PROJECTS -->
-<section class="projects reveal">
-  <h2>Projects</h2>
-  <div id="projects"></div>
+<section id="projects" class="projects-section reveal">
+  <div class="section-title">
+      <span class="badge">Portfolio</span>
+      <h2>Featured Work</h2>
+  </div>
+  <div id="projects-grid"></div>
 </section>
 
+<section id="contact" class="contact-section reveal">
+    <span class="badge">Contact</span>
+    <h2>Ready for the next sprint?</h2>
+    <a href="mailto:meduardatoso@gmail.com" class="email-link">meduardatoso@gmail.com</a>
+    <div class="socials">
+        <a href="https://github.com/Maria-Toso" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/maria-eduarda-toso/" target="_blank">LinkedIn</a>
+    </div>
+</section>
 </main>
 
-<script src="chart.js"></script>
+<footer>
+    <p>© 2026 Maria Toso. All rights reserved.</p>
+</footer>
+
 <script src="script.js"></script>
 </body>
 </html>

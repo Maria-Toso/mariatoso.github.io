@@ -1,71 +1,119 @@
 :root {
-  --primary: #0047FF;
-  --text: #0F172A;
-  --border: #E2E8F0;
+  --primary: #2563eb;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e5e7eb;
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: Inter, sans-serif;
   margin: 0;
   color: var(--text);
+  background: #fff;
 }
 
-section {
-  padding: 60px 5%;
-  max-width: 900px;
+/* NAV */
+.nav {
+  position: fixed;
+  width: 100%;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-content {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+/* HERO */
+.hero {
+  padding: 160px 5% 80px;
+  max-width: 1100px;
   margin: auto;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  line-height: 1.2;
 }
 
-.headline {
+.hero p {
   margin-top: 20px;
-  font-size: 1.2rem;
+  color: var(--muted);
 }
 
-.thinking ul {
-  margin-top: 20px;
-  padding-left: 20px;
+.hero-actions {
+  margin-top: 30px;
 }
 
-.case h3 {
-  margin-top: 25px;
-  color: var(--primary);
+/* BUTTONS */
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
 }
 
-.case img {
-  margin-top: 20px;
-  max-width: 100%;
+.btn-ghost {
+  margin-left: 10px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* GRID */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 5%;
+}
+
+/* CASE */
+.case {
+  max-width: 800px;
+  margin: auto;
+  padding: 80px 5%;
+}
+
+.case-card {
+  border: 1px solid var(--border);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+/* PROJECTS */
+.projects {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 5%;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
 }
 
 .project-item {
   border: 1px solid var(--border);
   padding: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
+  transition: 0.2s;
 }
 
-.project-item.secondary {
-  border-left: 4px solid var(--primary);
+.project-item:hover {
+  transform: translateY(-5px);
 }
 
-.project-item.collection {
-  opacity: 0.8;
-}
-
-.tech span {
-  margin-right: 8px;
-  font-size: 0.8rem;
-  color: var(--primary);
-}
-
-.private {
-  font-size: 0.8rem;
-  color: gray;
-}
-
+/* CONTACT */
 .contact {
   text-align: center;
+  padding: 80px 5%;
 }

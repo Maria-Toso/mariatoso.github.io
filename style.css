@@ -1,13 +1,12 @@
-/* Reset básico para não passarmos raiva */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif; /* Aquela fonte limpa que você viu nos exemplos */
+    font-family: 'Inter', sans-serif; 
 }
 
 :root {
-    --primary-blue: #0047FF; /* Azul clássico dos seus templates */
+    --primary-blue: #0047FF; 
     --bg-light: #F8F9FA;
     --text-dark: #1A1A1B;
     --border-gray: #E1E4E8;
@@ -24,7 +23,7 @@ body {
     display: inline-block;
     padding: 5px 15px;
     border: 1px solid var(--border-gray);
-    border-radius: 50px; /* Estilo pílula das imagens */
+    border-radius: 50px;
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -51,7 +50,7 @@ body {
     margin-right: 10px;
 }
 
-/* --- Hero Section (Imagem 2) --- */
+/* --- Hero Section  --- */
 .hero {
     padding: 100px 10%;
     text-align: center;
@@ -74,7 +73,7 @@ body {
     color: #555;
 }
 
-/* --- Barra de Techs (O toque dramático) --- */
+/* --- Barra de Techs  --- */
 .tech-bar {
     background: #000;
     color: #fff;
@@ -86,7 +85,7 @@ body {
     letter-spacing: 2px;
 }
 
-/* --- Skills & Projects Grid (Imagens 1 e 3) --- */
+/* --- Skills & Projects Grid  --- */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -103,7 +102,7 @@ body {
 }
 
 .project-card:hover {
-    transform: translateY(-10px); /* Aquele efeito de "olha como eu sou interativo" */
+    transform: translateY(-10px); 
 }
 
 .project-img {

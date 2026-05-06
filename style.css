@@ -1,161 +1,71 @@
 :root {
   --primary: #0047FF;
-  --bg: #ffffff;
   --text: #0F172A;
   --border: #E2E8F0;
-
-  --shadow-soft: 0 10px 30px rgba(0,0,0,0.05);
-  --shadow-strong: 0 20px 60px rgba(0,0,0,0.1);
-}
-
-body.dark {
-  --bg: #0F172A;
-  --text: #F1F5F9;
-  --border: #1E293B;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
+  font-family: Arial, sans-serif;
+  margin: 0;
   color: var(--text);
 }
 
-/* LOADER */
-#loader {
-  position: fixed;
-  inset: 0;
-  background: #0F172A;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-}
-
-.spinner {
-  width: 40px;
-  height: 40px;
-  border: 3px solid rgba(255,255,255,0.2);
-  border-top: 3px solid white;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-/* HEADER */
-header {
-  position: fixed;
-  width: 100%;
-  padding: 20px 5%;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo-circle {
-  width: 10px;
-  height: 10px;
-  background: var(--primary);
-  border-radius: 50%;
-}
-
-ul {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-  color: var(--text);
-}
-
-.nav-link.active {
-  color: var(--primary);
-}
-
-/* HERO */
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 350px;
-  gap: 60px;
-  padding: 160px 5%;
-}
-
-.hero span {
-  color: var(--primary);
-}
-
-.hero-card {
-  padding: 25px;
-  border-radius: 20px;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-soft);
-}
-
-/* BUTTONS */
-.btn-primary {
-  background: var(--primary);
-  color: white;
-  padding: 12px 25px;
-  border-radius: 8px;
-}
-
-.btn-secondary {
-  border: 1px solid var(--border);
-  padding: 12px 25px;
-  border-radius: 8px;
-}
-
-.btn-primary.big {
-  padding: 16px 40px;
-}
-
-/* PROJECTS */
-.saas-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
-  gap: 30px;
+section {
   padding: 60px 5%;
+  max-width: 900px;
+  margin: auto;
 }
 
-.saas-card {
-  padding: 25px;
-  border-radius: 20px;
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.headline {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.thinking ul {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.case h3 {
+  margin-top: 25px;
+  color: var(--primary);
+}
+
+.case img {
+  margin-top: 20px;
+  max-width: 100%;
+}
+
+.project-item {
   border: 1px solid var(--border);
-  transition: 0.3s;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
 }
 
-.saas-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-strong);
+.project-item.secondary {
+  border-left: 4px solid var(--primary);
 }
 
-/* CTA */
-.cta-section {
+.project-item.collection {
+  opacity: 0.8;
+}
+
+.tech span {
+  margin-right: 8px;
+  font-size: 0.8rem;
+  color: var(--primary);
+}
+
+.private {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.contact {
   text-align: center;
-  padding: 100px 5%;
-}
-
-/* CURSOR */
-.cursor-glow {
-  position: fixed;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(0,71,255,0.15), transparent 60%);
-  pointer-events: none;
-  transform: translate(-50%, -50%);
 }

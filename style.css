@@ -1,119 +1,75 @@
 :root {
-  --primary: #2563eb;
+  --bg: #ffffff;
   --text: #0f172a;
-  --muted: #64748b;
-  --border: #e5e7eb;
+  --card: #f1f5f9;
+}
+
+body.dark {
+  --bg: #020617;
+  --text: #e2e8f0;
+  --card: #0f172a;
 }
 
 body {
-  font-family: Inter, sans-serif;
   margin: 0;
+  font-family: Inter, sans-serif;
+  background: var(--bg);
   color: var(--text);
-  background: #fff;
+  transition: 0.3s;
 }
 
 /* NAV */
 .nav {
-  position: fixed;
-  width: 100%;
-  background: rgba(255,255,255,0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-}
-
-.nav-content {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
+  padding: 20px;
 }
 
 /* HERO */
 .hero {
-  padding: 160px 5% 80px;
-  max-width: 1100px;
-  margin: auto;
+  text-align: center;
+  padding: 120px 20px;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  line-height: 1.2;
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s;
 }
 
-.hero p {
-  margin-top: 20px;
-  color: var(--muted);
+.reveal.visible {
+  opacity: 1;
+  transform: none;
 }
 
-.hero-actions {
-  margin-top: 30px;
-}
-
-/* BUTTONS */
-.btn-primary {
-  background: var(--primary);
-  color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-}
-
-.btn-ghost {
-  margin-left: 10px;
-  color: var(--text);
-  text-decoration: none;
-}
-
-/* GRID */
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 5%;
-}
-
-/* CASE */
-.case {
-  max-width: 800px;
-  margin: auto;
-  padding: 80px 5%;
-}
-
-.case-card {
-  border: 1px solid var(--border);
-  padding: 30px;
-  border-radius: 12px;
+/* METRICS */
+.metrics {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
 }
 
 /* PROJECTS */
-.projects {
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 5%;
-}
-
-.projects-grid {
+#projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
   gap: 20px;
+  padding: 40px;
 }
 
-.project-item {
-  border: 1px solid var(--border);
+.project {
+  background: var(--card);
   padding: 20px;
   border-radius: 12px;
-  transition: 0.2s;
 }
 
-.project-item:hover {
-  transform: translateY(-5px);
+/* SKELETON */
+.skeleton {
+  height: 80px;
+  background: linear-gradient(90deg,#eee,#ddd,#eee);
+  animation: loading 1.2s infinite;
 }
 
-/* CONTACT */
-.contact {
-  text-align: center;
-  padding: 80px 5%;
+@keyframes loading {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
 }

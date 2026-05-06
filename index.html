@@ -13,98 +13,41 @@
 <header class="nav">
   <div class="nav-content">
     <span class="logo">Maria Toso</span>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <button id="theme-toggle">🌙</button>
   </div>
 </header>
 
 <main>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
+<!-- HERO -->
+<section class="hero reveal">
+  <h1>I build data-driven systems</h1>
+  <p>Python • Backend • Data Engineering</p>
+</section>
 
-      <span class="badge">FullStack Developer • Data Systems</span>
+<!-- METRICS -->
+<section class="metrics reveal">
+  <div><h2 id="repos">...</h2><span>Repos</span></div>
+  <div><h2 id="stars">...</h2><span>Stars</span></div>
+</section>
 
-      <h1>
-        I build systems that turn data
-        into decisions.
-      </h1>
+<!-- CASE -->
+<section class="case reveal">
+  <h2>PriceTrackerES</h2>
+  <p>Fuel price analysis using historical data</p>
 
-      <p>
-        Focused on Python, backend architecture and data processing.
-        I design simple, scalable and efficient systems.
-      </p>
+  <canvas id="chart"></canvas>
+</section>
 
-      <div class="hero-actions">
-        <a href="#projects" class="btn-primary">View Projects</a>
-        <a href="mailto:meduardatoso@gmail.com" class="btn-ghost">Contact</a>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ENGINEERING SECTION -->
-  <section class="engineering">
-    <div class="grid-3">
-
-      <div>
-        <h3>Data Processing</h3>
-        <p>Structuring and analyzing data using Python and Pandas.</p>
-      </div>
-
-      <div>
-        <h3>Backend Systems</h3>
-        <p>Designing APIs and scalable architectures with Flask.</p>
-      </div>
-
-      <div>
-        <h3>Problem Solving</h3>
-        <p>Transforming complex problems into structured solutions.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CASE -->
-  <section class="case">
-    <h2>Featured Project</h2>
-
-    <div class="case-card">
-      <h3>PriceTrackerES</h3>
-
-      <p>
-        System for analyzing fuel price variations using historical data.
-      </p>
-
-      <ul>
-        <li>Data processing with Pandas</li>
-        <li>Relational database (MySQL)</li>
-        <li>Structured backend logic</li>
-      </ul>
-
-      <a href="https://pricetrackeruvv.netlify.app/" target="_blank">
-        View Live →
-      </a>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="projects">
-    <h2>Selected Work</h2>
-    <div id="projects-container" class="projects-grid"></div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <h2>Let’s build something impactful</h2>
-    <a href="mailto:meduardatoso@gmail.com" class="btn-primary">Contact me</a>
-  </section>
+<!-- PROJECTS -->
+<section class="projects reveal">
+  <h2>Projects</h2>
+  <div id="projects"></div>
+</section>
 
 </main>
 
+<script src="chart.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

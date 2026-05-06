@@ -1,68 +1,77 @@
+// Theme Toggle Logic
 const btn = document.getElementById("theme-toggle");
-const reveals = document.querySelectorAll(".reveal");
-
-if(localStorage.theme === "dark") document.body.classList.add("dark");
-
 btn.onclick = () => {
   document.body.classList.toggle("dark");
-  localStorage.theme = document.body.classList.contains("dark") ? "dark" : "light";
   btn.innerText = document.body.classList.contains("dark") ? "☀️" : "🌙";
 };
 
-window.addEventListener("scroll", () => {
-  reveals.forEach(el => {
-    if(el.getBoundingClientRect().top < window.innerHeight - 100) el.classList.add("visible");
+// Intersection Observer for Reveal Animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add("visible");
   });
-});
+}, { threshold: 0.1 });
 
-async function fetchGitHub() {
+document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+// Real-time GitHub Data
+async function loadGitHub() {
+  const container = document.getElementById("projects-container");
   try {
-    const res = await fetch("https://api.github.com/users/Maria-Toso/repos");
-    const repos = await res.json();
-    const container = document.getElementById("projects-grid");
+    const response = await fetch("https://api.github.com/users/Maria-Toso/repos");
+    const repos = await response.json();
+    
     let totalStars = 0;
-
     container.innerHTML = "";
-    repos.forEach(r => {
-      if(!r.fork) {
-        totalStars += r.stargazers_count;
-        const card = document.createElement("div");
-        card.className = "project";
-        card.innerHTML = `
-          <div class="project-img"></div>
-          <div class="project-body">
-            <h3>${r.name}</h3>
-            <p>${r.description || "Complex system architecture and data processing."}</p>
-            <div style="margin-top:15px; font-size:0.8rem; font-weight:700; color:var(--accent)">
-              ${r.language || 'Python'} • ⭐ ${r.stargazers_count}
-            </div>
-          </div>
-        `;
-        container.appendChild(card);
-      }
+
+    // Filtrando os 6 repositórios mais relevantes
+    repos.slice(0, 6).forEach(repo => {
+      totalStars += repo.stargazers_count;
+      const card = document.createElement("div");
+      card.className = "project-card";
+      card.innerHTML = `
+        <span class="badge">${repo.language || 'Code'}</span>
+        <h3>${repo.name}</h3>
+        <p>${repo.description || "Architecting scalable backend solutions and data pipelines."}</p>
+        <div style="margin-top:20px; color:var(--accent); font-weight:700">
+             ⭐ ${repo.stargazers_count} Stars
+        </div>
+      `;
+      container.appendChild(card);
     });
 
     document.getElementById("repos").innerText = repos.length;
     document.getElementById("stars").innerText = totalStars;
-  } catch (e) { console.error("API Error"); }
+  } catch (err) {
+    console.error("API Fetch Error");
+  }
 }
 
-const ctx = document.getElementById("chart").getContext("2d");
+// Chart.js - PriceTrackerES Dynamic Visualization
+const ctx = document.getElementById('chart').getContext('2d');
 new Chart(ctx, {
   type: 'line',
   data: {
     labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     datasets: [{
-      label: 'Avg Price (R$)',
-      data: [5.20, 5.45, 5.10, 5.60, 5.85, 5.70],
+      label: 'Gasoline Trend',
+      data: [5.10, 5.45, 5.20, 5.80, 5.65, 6.10],
       borderColor: '#0047FF',
+      borderWidth: 3,
       tension: 0.4,
       fill: true,
       backgroundColor: 'rgba(0, 71, 255, 0.05)'
     }]
   },
-  options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } } }
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: { legend: { display: false } },
+    scales: { 
+        y: { display: false }, 
+        x: { grid: { display: false }, ticks: { color: '#64748b' } } 
+    }
+  }
 });
 
-fetchGitHub();
-window.dispatchEvent(new Event('scroll'));
+loadGitHub();

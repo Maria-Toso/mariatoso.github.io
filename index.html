@@ -11,62 +11,70 @@
 
 <header class="nav">
   <div class="nav-content">
-    <span class="logo">Maria Toso</span>
-    <div class="nav-links">
-        <a href="#projects">Work</a>
-        <a href="#contact">Contact</a>
+    <span class="logo">MARIA TOSO</span>
+    <div class="nav-controls">
+        <a href="#work">Work</a>
         <button id="theme-toggle">🌙</button>
     </div>
   </div>
 </header>
 
 <main>
-<section class="hero reveal">
-  <span class="badge">Engineered for Efficiency</span>
-  <h1>I build systems that turn data into decisions.</h1>
-  <p>Specializing in Python, Backend Architecture, and Data Pipelines.</p>
-  <div class="hero-btns">
-      <a href="curriculo-maria.pdf" class="btn-primary" download>Get CV</a>
-      <a href="#contact" class="btn-secondary">Let's talk</a>
-  </div>
-</section>
-
-<section class="metrics reveal">
-  <div class="metric-card"><h2 id="repos">0</h2><span>Repositories</span></div>
-  <div class="metric-card"><h2 id="stars">0</h2><span>GitHub Stars</span></div>
-</section>
-
-<section class="case reveal">
-  <div class="case-header">
-      <h2>PriceTrackerES</h2>
-      <p>Fuel price analysis & historical visualization</p>
-  </div>
-  <div class="chart-container">
-      <canvas id="chart"></canvas>
-  </div>
-</section>
-
-<section id="projects" class="projects-section reveal">
-  <div class="section-title">
-      <span class="badge">Portfolio</span>
-      <h2>Featured Work</h2>
-  </div>
-  <div id="projects-grid"></div>
-</section>
-
-<section id="contact" class="contact-section reveal">
-    <span class="badge">Contact</span>
-    <h2>Ready for the next sprint?</h2>
-    <a href="mailto:meduardatoso@gmail.com" class="email-link">meduardatoso@gmail.com</a>
-    <div class="socials">
-        <a href="https://github.com/Maria-Toso" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/maria-eduarda-toso/" target="_blank">LinkedIn</a>
+  <section class="hero reveal">
+    <div class="hero-content">
+        <span class="badge">SYSTEM ARCHITECT</span>
+        <h1>Building systems that turn data into decisions.</h1>
+        <p>Focused on Python, backend architecture, and data engineering.</p>
+        <div class="hero-actions">
+            <a href="#work" class="btn-main">View Projects</a>
+            <a href="mailto:meduardatoso@gmail.com" class="btn-sub">Contact</a>
+        </div>
     </div>
-</section>
+  </section>
+
+  <section class="dashboard reveal">
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <h2 id="repos">0</h2>
+            <span>Repositories</span>
+        </div>
+        <div class="metric-card">
+            <h2 id="stars">0</h2>
+            <span>Total Stars</span>
+        </div>
+    </div>
+    
+    <div class="featured-case">
+        <div class="case-info">
+            <span class="badge">FEATURED PROJECT</span>
+            <h3>PriceTrackerES</h3>
+            <p>System for analyzing fuel price variations using historical data with Pandas and MySQL.</p>
+            <ul class="case-tags">
+                <li>Data processing with Pandas</li>
+                <li>Relational database (MySQL)</li>
+                <li>Structured backend logic</li>
+            </ul>
+        </div>
+        <div class="case-visual">
+            <canvas id="chart"></canvas>
+        </div>
+    </div>
+  </section>
+
+  <section id="work" class="projects-section reveal">
+    <div class="section-header">
+        <h2>Selected Work</h2>
+    </div>
+    <div id="projects-container" class="grid-layout">
+        </div>
+  </section>
 </main>
 
-<footer>
-    <p>© 2026 Maria Toso. All rights reserved.</p>
+<footer class="footer">
+    <div class="footer-cta">
+        <h2>Let's build something impactful</h2>
+        <a href="mailto:meduardatoso@gmail.com" class="btn-main">Contact me</a>
+    </div>
 </footer>
 
 <script src="script.js"></script>

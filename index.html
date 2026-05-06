@@ -1,130 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MT.systems</title>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maria Toso | Fullstack Developer</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="logo">Maria<span>Toso</span></a>
 
-<div id="loader">
-  <h2>Connecting to MT.systems...</h2>
-</div>
+      <div class="nav-links">
+        <a href="#about">Sobre</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projetos</a>
+        <a href="#contact">Contato</a>
+      </div>
+    </nav>
+  </header>
 
-<nav class="glass-nav">
-  <div class="nav-content">
-    <span class="logo">MT<span class="accent">.systems</span></span>
-    <div class="links">
-      <a href="#work">Systems</a>
-      <a href="mailto:meduardatoso@gmail.com" class="nav-btn">Contact</a>
-    </div>
-  </div>
-</nav>
+  <main>
+    <section class="hero section">
+      <div class="hero-content">
+        <span class="badge">Disponível para estágio e vagas júnior</span>
 
-<main>
+        <h1>
+          Fullstack Developer focada em
+          <span>dados, backend e interfaces.</span>
+        </h1>
 
-<section class="hero reveal">
-  <span class="status-badge">● SYSTEMS ONLINE</span>
+        <p>
+          Desenvolvo aplicações web usando JavaScript, Python, SQL e tecnologias modernas,
+          combinando lógica de sistemas, visualização de dados e experiência do usuário.
+        </p>
 
-  <h1>
-    Data-driven systems.<br>
-    <span>Built for real-world impact.</span>
-  </h1>
-
-  <p>
-    Fullstack Developer building applications that transform data into usable products.
-  </p>
-
-  <div class="hero-actions">
-    <a href="#work" class="main-btn">Explore Systems</a>
-    <a href="mailto:meduardatoso@gmail.com" class="ghost-btn">Contact</a>
-  </div>
-</section>
-
-<section class="proof reveal">
-  <div class="proof-grid">
-    <div>
-      <h3>Data Systems</h3>
-      <p>SQL, Pandas, structured pipelines</p>
-    </div>
-    <div>
-      <h3>Backend</h3>
-      <p>Python, APIs and logic</p>
-    </div>
-    <div>
-      <h3>Interfaces</h3>
-      <p>Usable and responsive UI</p>
-    </div>
-  </div>
-</section>
-
-<section class="system-preview reveal">
-  <div class="preview-header">
-    <h2>Live System Preview</h2>
-    <span class="status-badge">● Demo Environment</span>
-  </div>
-
-  <div class="dashboard">
-    <div class="sidebar">
-      <h3>MT.systems</h3>
-      <ul>
-        <li class="active">Dashboard</li>
-        <li>Analytics</li>
-        <li>Data</li>
-        <li>Settings</li>
-      </ul>
-    </div>
-
-    <div class="dashboard-main">
-      <div class="metrics">
-        <div class="metric-card">
-          <span>Active Systems</span>
-          <h2>3</h2>
-        </div>
-        <div class="metric-card">
-          <span>Data Processed</span>
-          <h2>1.2M</h2>
-        </div>
-        <div class="metric-card">
-          <span>Queries/sec</span>
-          <h2>245</h2>
+        <div class="hero-actions">
+          <a href="#projects" class="btn primary">Ver projetos</a>
+          <a href="https://github.com/Maria-Toso" target="_blank" class="btn secondary">GitHub</a>
         </div>
       </div>
+    </section>
 
-      <div class="chart-box">
-        <canvas id="dashboardChart"></canvas>
+    <section id="about" class="about section">
+      <div class="section-title">
+        <span>Sobre</span>
+        <h2>Quem sou eu</h2>
       </div>
-    </div>
-  </div>
-</section>
 
-<section id="work" class="grid-section reveal">
-  <h2>System Modules</h2>
-  <div id="projects-container" class="project-grid"></div>
-</section>
+      <div class="about-card">
+        <p>
+          Sou Maria Toso, estudante de Ciência da Computação, com foco no desenvolvimento
+          de aplicações web, sistemas backend e soluções orientadas a dados.
+        </p>
 
-<section class="about reveal">
-  <h2>System Overview</h2>
-  <p>
-    Computer Science student focused on building real-world systems combining backend, data and UI.
-  </p>
-</section>
+        <p>
+          Meus projetos envolvem análise de dados, bancos relacionais e em grafo,
+          validação de informações, interfaces responsivas e publicação de aplicações.
+        </p>
+      </div>
+    </section>
 
-<section class="cta reveal">
-  <h2>Let's build something impactful</h2>
-  <a href="mailto:meduardatoso@gmail.com" class="main-btn">Get in touch</a>
-</section>
+    <section id="skills" class="skills section">
+      <div class="section-title">
+        <span>Stack</span>
+        <h2>Tecnologias</h2>
+      </div>
 
-</main>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <p>HTML, CSS, JavaScript, interfaces responsivas e UX.</p>
+        </div>
 
-<footer>
-  <p>© 2026 MT.systems</p>
-</footer>
+        <div class="skill-card">
+          <h3>Backend & Dados</h3>
+          <p>Python, SQL, MySQL, Pandas, lógica de sistemas e processamento de dados.</p>
+        </div>
 
-<script src="script.js"></script>
+        <div class="skill-card">
+          <h3>Ferramentas</h3>
+          <p>Git, GitHub, Figma, Netlify e organização de projetos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects section">
+      <div class="section-title">
+        <span>Projetos</span>
+        <h2>Projetos selecionados</h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card featured">
+          <div>
+            <span class="project-tag">Web App • Dados • Deploy</span>
+            <h3>Fuel Price Analytics System</h3>
+            <p>
+              Aplicação web para análise de preços de combustíveis, utilizando
+              HTML, CSS, JavaScript, MySQL e deploy via Netlify.
+            </p>
+          </div>
+
+          <div class="project-footer">
+            <span>HTML • CSS • JS • MySQL • Netlify</span>
+            <a href="https://pricetrackeruvv.netlify.app/" target="_blank">Ver projeto</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <span class="project-tag">Banco de Dados em Grafo</span>
+            <h3>Movie Recommendation System</h3>
+            <p>
+              Sistema de recomendação de filmes utilizando Neo4j e consultas Cypher,
+              baseado em relações entre usuários, gêneros e filmes.
+            </p>
+          </div>
+
+          <div class="project-footer">
+            <span>Neo4j • Cypher • Python</span>
+            <a href="https://github.com/Maria-Toso/Neo4j-Movie-Recommendation-System" target="_blank">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <span class="project-tag">Validação • UX</span>
+            <h3>Credit Card Validation System</h3>
+            <p>
+              Sistema de validação de cartão com algoritmo de Luhn,
+              focado em lógica, tratamento de dados e feedback ao usuário.
+            </p>
+          </div>
+
+          <div class="project-footer">
+            <span>JavaScript • HTML • CSS</span>
+            <a href="https://github.com/Maria-Toso/Validador-de-Cartao-de-Credito" target="_blank">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div>
+            <span class="project-tag">UX/UI • Figma</span>
+            <h3>Fortes HE — UX/UI Case</h3>
+            <p>
+              Protótipo desenvolvido no Figma com foco em experiência do usuário,
+              organização visual e navegação intuitiva.
+            </p>
+          </div>
+
+          <div class="project-footer">
+            <span>Figma • UX/UI</span>
+            <a href="https://www.figma.com/proto/Wyb2fwEy7vnEXveZxn1BoY/Fortes-HE?node-id=2-2&t=EuLuHFGcSvtpHF47-1&starting-point-node-id=2%3A2" target="_blank">Ver protótipo</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section">
+      <div class="contact-card">
+        <span>Contato</span>
+        <h2>Aberta a oportunidades de estágio e vagas júnior</h2>
+        <p>
+          Busco contribuir em projetos reais enquanto continuo evoluindo como desenvolvedora.
+        </p>
+
+        <div class="contact-actions">
+          <a href="mailto:meduardatoso@gmail.com" class="btn primary">Enviar email</a>
+          <a href="https://www.linkedin.com/in/maria-eduarda-toso/" target="_blank" class="btn secondary">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Maria Toso — Fullstack Developer</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

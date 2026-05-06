@@ -1,65 +1,109 @@
+/* Reset Básico - Essencial para tirar as margens padrões do navegador */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif; 
 }
 
 :root {
-    --primary-blue: #0047FF; 
-    --bg-light: #F8F9FA;
+    --primary-blue: #0047FF;
+    --bg-light: #FFFFFF; /* Fundo branco puro como nos exemplos */
     --text-dark: #1A1A1B;
+    --text-gray: #666;
     --border-gray: #E1E4E8;
+    --section-padding: 100px 10%; 
 }
 
 body {
     background-color: var(--bg-light);
     color: var(--text-dark);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif; /* Fonte limpa */
     line-height: 1.6;
+    font-size: 16px; /* Aumenta o tamanho base do texto */
 }
 
-/* --- Componentes Globais --- */
+/* --- Container Global para centralizar tudo --- */
+main, header nav, footer {
+    max-width: 1400px; /* Impede que o site fique muito largo em telas gigantes */
+    margin: 0 auto;    /* Centraliza na tela */
+    width: 100%;
+}
+
+/* --- Badges (aqueles pequenos textos em pílula) --- */
 .badge {
     display: inline-block;
-    padding: 5px 15px;
+    padding: 6px 16px;
     border: 1px solid var(--border-gray);
     border-radius: 50px;
     font-size: 0.75rem;
     font-weight: 600;
     text-transform: uppercase;
-    color: #666;
-    margin-bottom: 20px;
+    color: var(--text-gray);
+    margin-bottom: 25px;
 }
 
-.btn-primary {
-    background: var(--primary-blue);
-    color: white;
-    padding: 12px 24px;
-    border-radius: 8px;
+/* --- Header & Nav (Consertando o menu espremido) --- */
+header {
+    background-color: var(--bg-light);
+    border-bottom: 1px solid var(--border-gray);
+    padding: 20px 10%;
+    position: fixed; /* Fixa o menu no topo */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between; /* Logo na esquerda, menu na direita */
+    align-items: center;
+}
+
+.logo-circle {
+    width: 20px;
+    height: 20px;
+    background-color: var(--primary-blue);
+    border-radius: 50%;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* Espaço entre os links */
+}
+
+header ul li a {
     text-decoration: none;
-    font-weight: 600;
+    color: var(--text-gray);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s;
 }
 
-.btn-secondary {
-    background: transparent;
-    border: 1px solid var(--border-gray);
-    color: var(--text-dark);
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-right: 10px;
+header ul li a:hover {
+    color: var(--primary-blue);
 }
 
-/* --- Hero Section  --- */
+/* --- Main Sections: Espaçamento de Verdade --- */
+section {
+    padding: var(--section-padding); /* Dá espaço em cima, baixo e pros lados */
+    margin-top: 80px; /* Espaço para o header fixo não cobrir o conteúdo */
+}
+
+/* --- Hero Section (Aumentando TUDO) --- */
 .hero {
-    padding: 100px 10%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px 10% 100px 10%; /* Mais espaço no topo */
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3.5rem; /* Título bem grande */
     font-weight: 400;
-    margin-bottom: 10px;
+    line-height: 1.2;
+    margin-bottom: 15px;
 }
 
 .hero h1 strong {
@@ -68,69 +112,156 @@ body {
 }
 
 .hero p {
+    font-size: 1.1rem;
+    color: var(--text-gray);
     max-width: 600px;
-    margin: 20px auto;
-    color: #555;
+    margin-bottom: 40px;
 }
 
-/* --- Barra de Techs  --- */
+.hero-btns {
+    display: flex;
+    gap: 15px;
+}
+
+/* Botões */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0036cc;
+}
+
+.btn-secondary {
+    background-color: white;
+    border: 1px solid var(--border-gray);
+    color: var(--text-dark);
+}
+
+.btn-secondary:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- Tech Bar (A faixa preta) --- */
 .tech-bar {
-    background: #000;
-    color: #fff;
+    background-color: #000;
+    color: white;
     padding: 15px 0;
-    overflow: hidden;
-    white-space: nowrap;
     text-align: center;
     font-weight: bold;
+    font-size: 0.8rem;
     letter-spacing: 2px;
+    width: 100vw; /* Ocupa a largura total da janela */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
-/* --- Skills & Projects Grid  --- */
+/* --- Skills Section --- */
+.skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Duas colunas: texto e lista */
+    gap: 50px;
+    align-items: start;
+}
+
+.skills-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.skills-list h3 {
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+/* Tags de skills  */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tags span {
+    display: inline-block;
+    padding: 6px 14px;
+    border: 1px solid var(--border-gray);
+    border-radius: 50px;
+    font-size: 0.8rem;
+    color: var(--text-gray);
+}
+
+/* --- Projects Section --- */
+.projects-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
     gap: 30px;
-    padding: 50px 10%;
 }
 
 .project-card {
     background: white;
     border-radius: 16px;
-    overflow: hidden;
     border: 1px solid var(--border-gray);
-    transition: transform 0.3s ease;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
-    transform: translateY(-10px); 
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
 .project-img {
-    height: 200px;
+    height: 250px; 
+    background-color: #F0F0F0; 
     background-size: cover;
     background-position: center;
-    background-color: #ddd;
 }
 
 .project-info {
-    padding: 20px;
+    padding: 25px;
 }
 
-.tag-outline {
-    font-size: 0.7rem;
-    border: 1px solid var(--primary-blue);
+.project-info h3 {
+    margin-top: 10px;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.tech-used {
+    margin-top: 15px;
+    display: flex;
+    gap: 8px;
+    font-size: 0.8rem;
     color: var(--primary-blue);
-    padding: 2px 8px;
-    border-radius: 4px;
 }
 
-.project-card, .skills-list, .hero {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.8s ease-out;
-}
-
-.project-card.active, .skills-list.active, .hero.active {
-    opacity: 1;
-    transform: translateY(0);
+/* --- Footer --- */
+footer {
+    padding: 50px 10%;
+    border-top: 1px solid var(--border-gray);
+    text-align: center;
+    color: var(--text-gray);
+    font-size: 0.8rem;
 }

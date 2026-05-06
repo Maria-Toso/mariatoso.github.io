@@ -1,102 +1,106 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maria Toso | FullStack Developer</title>
-
-  <meta name="description" content="Desenvolvedora FullStack com foco em Python, Flask e análise de dados.">
+  <title>Maria Toso | Engineer</title>
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <nav>
-    <h3>Maria Toso</h3>
-  </nav>
+<header class="nav">
+  <div class="nav-content">
+    <span class="logo">Maria Toso</span>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
 <main>
 
   <!-- HERO -->
   <section class="hero">
-    <h1>Maria Eduarda Toso</h1>
+    <div class="hero-content">
 
-    <p class="headline">
-      Desenvolvo sistemas orientados a dados com foco em performance e resolução de problemas reais.
-    </p>
+      <span class="badge">FullStack Developer • Data Systems</span>
 
-    <p class="sub">
-      Python • Flask • SQL • Data Analysis
-    </p>
+      <h1>
+        I build systems that turn data
+        into decisions.
+      </h1>
+
+      <p>
+        Focused on Python, backend architecture and data processing.
+        I design simple, scalable and efficient systems.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="mailto:meduardatoso@gmail.com" class="btn-ghost">Contact</a>
+      </div>
+
+    </div>
   </section>
 
-  <!-- COMO EU PENSO -->
-  <section class="thinking">
-    <h2>Como eu desenvolvo sistemas</h2>
+  <!-- ENGINEERING SECTION -->
+  <section class="engineering">
+    <div class="grid-3">
 
-    <ul>
-      <li>Definição clara do problema antes da implementação</li>
-      <li>Separação entre lógica, dados e interface</li>
-      <li>Foco em soluções simples e escaláveis</li>
-      <li>Uso de dados para validar decisões</li>
-    </ul>
+      <div>
+        <h3>Data Processing</h3>
+        <p>Structuring and analyzing data using Python and Pandas.</p>
+      </div>
+
+      <div>
+        <h3>Backend Systems</h3>
+        <p>Designing APIs and scalable architectures with Flask.</p>
+      </div>
+
+      <div>
+        <h3>Problem Solving</h3>
+        <p>Transforming complex problems into structured solutions.</p>
+      </div>
+
+    </div>
   </section>
 
-  <!-- CASE TÉCNICO -->
+  <!-- CASE -->
   <section class="case">
+    <h2>Featured Project</h2>
 
-    <h2>Case Técnico: PriceTrackerES</h2>
+    <div class="case-card">
+      <h3>PriceTrackerES</h3>
 
-    <h3>Contexto</h3>
-    <p>Projeto criado para analisar variação de preços de combustíveis ao longo do tempo.</p>
+      <p>
+        System for analyzing fuel price variations using historical data.
+      </p>
 
-    <h3>Problema</h3>
-    <p>Dados não organizados dificultavam análise histórica.</p>
+      <ul>
+        <li>Data processing with Pandas</li>
+        <li>Relational database (MySQL)</li>
+        <li>Structured backend logic</li>
+      </ul>
 
-    <h3>Solução</h3>
-    <p>Sistema para coleta, processamento e armazenamento de dados para análise.</p>
-
-    <h3>Arquitetura</h3>
-    <ul>
-      <li>Python → coleta</li>
-      <li>Pandas → processamento</li>
-      <li>MySQL → banco</li>
-      <li>Web → visualização</li>
-    </ul>
-
-    <h3>Desafios</h3>
-    <ul>
-      <li>Limpeza e organização dos dados</li>
-      <li>Estruturação do banco</li>
-    </ul>
-
-    <h3>Resultados</h3>
-    <ul>
-      <li>Dados organizados</li>
-      <li>Análise de padrões</li>
-    </ul>
-
-    <img src="assets/images/grafico-exemplo.png" alt="Exemplo de gráfico">
-
-    <a href="https://pricetrackeruvv.netlify.app/" target="_blank">
-      Ver projeto funcionando
-    </a>
-
+      <a href="https://pricetrackeruvv.netlify.app/" target="_blank">
+        View Live →
+      </a>
+    </div>
   </section>
 
-  <!-- PROJETOS -->
-  <section id="projects">
-    <h2>Outros Projetos</h2>
-    <div id="projects-container"></div>
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <h2>Selected Work</h2>
+    <div id="projects-container" class="projects-grid"></div>
   </section>
 
-  <!-- CONTATO -->
-  <section class="contact">
-    <h2>Contato</h2>
-    <p>meduardatoso@gmail.com</p>
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Let’s build something impactful</h2>
+    <a href="mailto:meduardatoso@gmail.com" class="btn-primary">Contact me</a>
   </section>
 
 </main>

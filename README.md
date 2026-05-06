@@ -12,7 +12,7 @@ Portfólio profissional desenvolvido com foco em performance, UX e arquitetura l
 Apresentar projetos com estrutura escalável e código organizado.
 
 ## 🔗 Deploy
-https://seuusuario.github.io/portfolio
+https://mariatoso.github.io/portfolio
 
 ## 📂 Estrutura
 - /data → dados dos projetos

@@ -1,126 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maria Toso | FullStack Developer</title>
-    <!-- Font Awesome para os ícones dos botões sociais funcionar -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maria Toso | FullStack Developer</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <header>
-        <nav>
-            <div class="logo-circle"></div>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- CURSOR GLOW -->
+<div class="cursor-glow"></div>
+
+<header>
+  <nav>
+    <div class="logo-circle"></div>
+
+    <ul>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <button id="theme-toggle">🌙</button>
+  </nav>
+</header>
 
 <main>
 
-    <!-- HERO / VALUE -->
-    <section class="hero active">
-        <div class="hero-content">
-            <span class="badge">FullStack Developer • Building scalable systems</span>
+  <!-- HERO -->
+  <section id="about" class="hero">
+    <div class="hero-content">
+      <span class="badge">FullStack Developer • Building scalable systems</span>
 
-            <h1>
-                I design & build <span>digital products</span><br>
-                that actually work at scale
-            </h1>
+      <h1>
+        I build <span>systems & products</span><br>
+        that actually scale
+      </h1>
 
-            <p>
-                Focused on backend performance, data-driven systems and clean frontend experiences.
-            </p>
+      <p>
+        Focused on backend performance, data systems and modern frontend experiences.
+      </p>
 
-            <div class="hero-btns">
-                <a href="#projects" class="btn-primary">View Projects</a>
-                <a href="#contact" class="btn-secondary">Let’s talk</a>
-            </div>
-        </div>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-secondary">Contact</a>
+      </div>
+    </div>
 
-        <div class="hero-card">
-            <div class="card-header">System Overview</div>
-            <div class="card-body">
-                <p>✔ API Performance</p>
-                <p>✔ Data Processing</p>
-                <p>✔ Scalable Architecture</p>
-            </div>
-        </div>
-    </section>
+    <div class="hero-card">
+      <div class="card-header">System Overview</div>
+      <p>✔ APIs</p>
+      <p>✔ Data Processing</p>
+      <p>✔ Scalable Architecture</p>
+    </div>
+  </section>
 
-    <!-- FEATURED PROJECTS (SaaS style) -->
-    <section id="projects" class="saas-section">
-        <span class="badge">PRODUCTS</span>
-        <h2>Selected Work</h2>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <span class="badge">PROJECTS</span>
+    <h2>Selected Work</h2>
 
-        <div class="saas-grid">
+    <div id="github-projects" class="saas-grid"></div>
+  </section>
 
-            <div class="saas-card">
-                <div class="saas-info">
-                    <h3>Condozen</h3>
-                    <p>Full condominium management system with dashboards and automation.</p>
+  <!-- CONTACT -->
+  <section id="contact" class="cta-section">
+    <h2>Let’s build something impactful</h2>
+    <p>Available for freelance and junior roles</p>
 
-                    <div class="tech-used">
-                        <span>Flask</span><span>SQL</span><span>Dashboards</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a href="#">Live</a>
-                        <a href="#">Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="saas-card">
-                <div class="saas-info">
-                    <h3>PriceTrackerES</h3>
-                    <p>Fuel price analytics system with historical tracking and insights.</p>
-
-                    <div class="tech-used">
-                        <span>Python</span><span>Pandas</span><span>MySQL</span>
-                    </div>
-
-                    <div class="project-links">
-                        <a href="#">Live</a>
-                        <a href="#">Code</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section id="contact" class="cta-section">
-        <h2>Let’s build something impactful</h2>
-        <p>Available for freelance and junior opportunities.</p>
-
-        <a href="mailto:meduardatoso@gmail.com" class="btn-primary big">
-            Contact me
-        </a>
-    </section>
+    <a href="mailto:meduardatoso@gmail.com" class="btn-primary big">
+      Contact me
+    </a>
+  </section>
 
 </main>
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-left">
-                <strong>Maria Eduarda De Miranda Toso</strong>
-                <span>All rights reserved © 2026</span>
-            </div>
-            <div class="footer-right">
-                <span>Powered with 💙 by Maria Toso</span>
-            </div>
-        </div>
-    </footer>
+<footer>
+  <p>© 2026 Maria Toso</p>
+</footer>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

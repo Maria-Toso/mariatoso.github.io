@@ -23,87 +23,91 @@
         </nav>
     </header>
 
-    <main>
-        <section id="about" class="hero">
-            <span class="badge">Hello world • This is my portfolio page</span>
-            <h1>My name is <strong>Maria</strong></h1>
-            <h1>I’m a Jr <strong>FullStack Developer</strong></h1>
-            <p>Merging the finest elements of frontend and backend to forge innovative user experiences.</p>
-            <div class="hero-btns">
-                <!-- COMO FAZER OS BOTÕES FUNCIONAREM: -->
-                <!-- Coloque o nome do seu arquivo de currículo no href abaixo -->
-                <a href="Maria_Eduarda_Curriculum.pdf" class="btn-secondary" download>Download CV</a>
-                <a href="#contact" class="btn-primary">Contact me →</a>
-            </div>
-        </section>
+<main>
 
-        <div class="tech-bar">
-            <span>PYTHON ★ FLASK ★ SQL ★ PANDAS ★ DATA ANALYSIS</span>
+    <!-- HERO / VALUE -->
+    <section class="hero active">
+        <div class="hero-content">
+            <span class="badge">FullStack Developer • Building scalable systems</span>
+
+            <h1>
+                I design & build <span>digital products</span><br>
+                that actually work at scale
+            </h1>
+
+            <p>
+                Focused on backend performance, data-driven systems and clean frontend experiences.
+            </p>
+
+            <div class="hero-btns">
+                <a href="#projects" class="btn-primary">View Projects</a>
+                <a href="#contact" class="btn-secondary">Let’s talk</a>
+            </div>
         </div>
 
-        <section id="skills" class="skills-container">
-            <div class="skills-text">
-                <span class="badge">SKILLS</span>
-                <h2>Skills & Experience</h2>
-                <p>Desenvolvedora focada em soluções robustas, com experiência em criação de dashboards interativos e manipulação de grandes volumes de dados.</p>
+        <div class="hero-card">
+            <div class="card-header">System Overview</div>
+            <div class="card-body">
+                <p>✔ API Performance</p>
+                <p>✔ Data Processing</p>
+                <p>✔ Scalable Architecture</p>
             </div>
-            <div class="skills-list">
-                <h3>FRONT-END</h3>
-                <div class="tags">
-                    <span>HTML</span> <span>CSS</span> <span>JavaScript</span> <span>React</span>
-                </div>
-                <h3>BACK-END</h3>
-                <div class="tags">
-                    <span>Python</span> <span>Flask</span> <span>SQLAlchemy</span> <span>MySQL/SQLite</span> <span>Pandas</span>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="projects" class="projects-section">
-            <span class="badge">PROJECTS</span>
-            <h2>Featured Projects</h2>
-            <div class="projects-grid">
-                
-                <!-- PROJETO 1: CONDOZEN -->
-                <article class="project-card">                
-                    <div class="project-img" style="background-image: url('img/condozen.jpg');"></div>
-                    <div class="project-info">
-                        <span class="tag-outline">FULL-STACK</span>
-                        <h3>Condozen</h3>
-                        <p>Gestão condominial completa com Flask e Dashboards.</p>
-                        <div class="tech-used">
-                            <span>Flask</span> <span>SQLAlchemy</span>
-                        </div>
+    <!-- FEATURED PROJECTS (SaaS style) -->
+    <section id="projects" class="saas-section">
+        <span class="badge">PRODUCTS</span>
+        <h2>Selected Work</h2>
+
+        <div class="saas-grid">
+
+            <div class="saas-card">
+                <div class="saas-info">
+                    <h3>Condozen</h3>
+                    <p>Full condominium management system with dashboards and automation.</p>
+
+                    <div class="tech-used">
+                        <span>Flask</span><span>SQL</span><span>Dashboards</span>
                     </div>
-                </article>
 
-                <!-- PROJETO 2: PRICETRACKERES -->
-                <article class="project-card">
-                    <div class="project-img" style="background-image: url('img/price.jpg');"></div>
-                    <div class="project-info">
-                        <span class="tag-outline">DATA SCIENCE</span>
-                        <h3>PriceTrackerES</h3>
-                        <p>Análise e monitoramento de preços de combustíveis no ES.</p>
-                        <div class="tech-used">
-                            <span>Python</span> <span>Pandas</span> <span>SQL</span>
-                        </div>
+                    <div class="project-links">
+                        <a href="#">Live</a>
+                        <a href="#">Code</a>
                     </div>
-                </article>
-
+                </div>
             </div>
-        </section>
 
-        <section id="contact" class="contact-section">
-            <span class="badge">CONTACT</span>
-            <h2>And I’d like to work with you</h2>
-            <p class="status-available"><span>●</span> Available for new challenges</p>
-            <a href="mailto:meduardatoso@gmail.com" class="email-link">meduardatoso@gmail.com</a>
-            <div class="social-links">
-                <a href="https://github.com/Maria-Toso" class="btn-pill" target="_blank">Github</a>
-                <a href="https://linkedin.com/in/maria-eduarda-toso/" class="btn-pill" target="_blank">LinkedIn</a>
+            <div class="saas-card">
+                <div class="saas-info">
+                    <h3>PriceTrackerES</h3>
+                    <p>Fuel price analytics system with historical tracking and insights.</p>
+
+                    <div class="tech-used">
+                        <span>Python</span><span>Pandas</span><span>MySQL</span>
+                    </div>
+
+                    <div class="project-links">
+                        <a href="#">Live</a>
+                        <a href="#">Code</a>
+                    </div>
+                </div>
             </div>
-        </section>
-    </main>
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contact" class="cta-section">
+        <h2>Let’s build something impactful</h2>
+        <p>Available for freelance and junior opportunities.</p>
+
+        <a href="mailto:meduardatoso@gmail.com" class="btn-primary big">
+            Contact me
+        </a>
+    </section>
+
+</main>
 
     <footer>
         <div class="footer-content">

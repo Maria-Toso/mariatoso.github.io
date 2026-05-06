@@ -3,78 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maria Toso | Backend Engineer</title>
+  <title>MT.systems</title>
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="nav">
+<div id="loader">
+  <h2>Connecting to MT.systems...</h2>
+</div>
+
+<nav class="glass-nav">
   <div class="nav-content">
-    <span class="logo">MARIA TOSO</span>
-    <div class="nav-controls">
-        <a href="#work">Work</a>
-        <button id="theme-toggle">🌙</button>
+    <span class="logo">MT<span class="accent">.systems</span></span>
+    <div class="links">
+      <a href="#work">Systems</a>
+      <a href="mailto:meduardatoso@gmail.com" class="nav-btn">Contact</a>
     </div>
   </div>
-</header>
+</nav>
 
 <main>
-  <section class="hero reveal">
-    <div class="hero-content">
-        <span class="badge">SYSTEM ARCHITECT</span>
-        <h1>Building systems that turn data into decisions.</h1>
-        <p>Focused on Python, backend architecture, and data engineering.</p>
-        <div class="hero-actions">
-            <a href="#work" class="btn-main">View Projects</a>
-            <a href="mailto:meduardatoso@gmail.com" class="btn-sub">Contact</a>
-        </div>
-    </div>
-  </section>
 
-  <section class="dashboard reveal">
-    <div class="metrics-grid">
-        <div class="metric-card">
-            <h2 id="repos">0</h2>
-            <span>Repositories</span>
-        </div>
-        <div class="metric-card">
-            <h2 id="stars">0</h2>
-            <span>Total Stars</span>
-        </div>
-    </div>
-    
-    <div class="featured-case">
-        <div class="case-info">
-            <span class="badge">FEATURED PROJECT</span>
-            <h3>PriceTrackerES</h3>
-            <p>System for analyzing fuel price variations using historical data with Pandas and MySQL.</p>
-            <ul class="case-tags">
-                <li>Data processing with Pandas</li>
-                <li>Relational database (MySQL)</li>
-                <li>Structured backend logic</li>
-            </ul>
-        </div>
-        <div class="case-visual">
-            <canvas id="chart"></canvas>
-        </div>
-    </div>
-  </section>
+<section class="hero reveal">
+  <span class="status-badge">● SYSTEMS ONLINE</span>
 
-  <section id="work" class="projects-section reveal">
-    <div class="section-header">
-        <h2>Selected Work</h2>
+  <h1>
+    Data-driven systems.<br>
+    <span>Built for real-world impact.</span>
+  </h1>
+
+  <p>
+    Fullstack Developer building applications that transform data into usable products.
+  </p>
+
+  <div class="hero-actions">
+    <a href="#work" class="main-btn">Explore Systems</a>
+    <a href="mailto:meduardatoso@gmail.com" class="ghost-btn">Contact</a>
+  </div>
+</section>
+
+<section class="proof reveal">
+  <div class="proof-grid">
+    <div>
+      <h3>Data Systems</h3>
+      <p>SQL, Pandas, structured pipelines</p>
     </div>
-    <div id="projects-container" class="grid-layout">
+    <div>
+      <h3>Backend</h3>
+      <p>Python, APIs and logic</p>
+    </div>
+    <div>
+      <h3>Interfaces</h3>
+      <p>Usable and responsive UI</p>
+    </div>
+  </div>
+</section>
+
+<section class="system-preview reveal">
+  <div class="preview-header">
+    <h2>Live System Preview</h2>
+    <span class="status-badge">● Demo Environment</span>
+  </div>
+
+  <div class="dashboard">
+    <div class="sidebar">
+      <h3>MT.systems</h3>
+      <ul>
+        <li class="active">Dashboard</li>
+        <li>Analytics</li>
+        <li>Data</li>
+        <li>Settings</li>
+      </ul>
+    </div>
+
+    <div class="dashboard-main">
+      <div class="metrics">
+        <div class="metric-card">
+          <span>Active Systems</span>
+          <h2>3</h2>
         </div>
-  </section>
+        <div class="metric-card">
+          <span>Data Processed</span>
+          <h2>1.2M</h2>
+        </div>
+        <div class="metric-card">
+          <span>Queries/sec</span>
+          <h2>245</h2>
+        </div>
+      </div>
+
+      <div class="chart-box">
+        <canvas id="dashboardChart"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="grid-section reveal">
+  <h2>System Modules</h2>
+  <div id="projects-container" class="project-grid"></div>
+</section>
+
+<section class="about reveal">
+  <h2>System Overview</h2>
+  <p>
+    Computer Science student focused on building real-world systems combining backend, data and UI.
+  </p>
+</section>
+
+<section class="cta reveal">
+  <h2>Let's build something impactful</h2>
+  <a href="mailto:meduardatoso@gmail.com" class="main-btn">Get in touch</a>
+</section>
+
 </main>
 
-<footer class="footer">
-    <div class="footer-cta">
-        <h2>Let's build something impactful</h2>
-        <a href="mailto:meduardatoso@gmail.com" class="btn-main">Contact me</a>
-    </div>
+<footer>
+  <p>© 2026 MT.systems</p>
 </footer>
 
 <script src="script.js"></script>
